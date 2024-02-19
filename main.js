@@ -14,6 +14,6 @@ export default async function ({ req, res, log, error }) {
       "65ccca601fd0e39ad991",
       "65ccca69938fb6387ea1"
     );
-    return res.send(data.documents);
+    return res.json(data.documents);
   }
 }
