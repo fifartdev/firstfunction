@@ -9,7 +9,7 @@ export default async function ({ req, res, log, error }) {
 
   const databases = new Databases(client);
 
-  if (req.method === "GET") {
+  if (req.method === "POST") {
     const data = await databases.listDocuments(
       "65ccca601fd0e39ad991",
       "65ccca69938fb6387ea1"
