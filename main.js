@@ -8,7 +8,7 @@ client
 
 const users = new Users(client);
 
-let activeUser = await users.list();
+let activeUser = users.list();
 
 export default async function ({ req, res, log, error }) {
   if (req.method === "GET") {
