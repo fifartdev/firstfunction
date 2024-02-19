@@ -3,6 +3,6 @@ export default async function ({ req, res, log, error }) {
     return res.send("Hello Soulio");
   }
   if (req.method === "GET") {
-    console.log("The", { req, res, log, error });
+    window.alert("The", { req, res, log, error });
   }
 }
