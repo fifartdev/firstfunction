@@ -9,10 +9,12 @@ client
 const users = new Users(client);
 
 export default async function ({ req, res, log, error }) {
-  const users = await users.list();
+  const userList = await users.list();
 
   if (req.method === "GET") {
-    return res.send("Hello Soulio", users);
+    userList.map((u) => {
+      res.send("Hello ", u.email);
+    });
   }
   if (req.method === "GET") {
     return log;
