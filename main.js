@@ -13,7 +13,7 @@ export default async function ({ req, res, log, error }) {
     const data = await databases.listDocuments(
       "65ccca601fd0e39ad991",
       "65ccca69938fb6387ea1"
-    ).documents;
-    return res.send(data);
+    );
+    return res.send(data.documents);
   }
 }
