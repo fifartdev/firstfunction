@@ -7,11 +7,10 @@ client
   .setProject("65cb29d9bd45ff3d39c2");
 
 const accounts = new Account(client);
+const allSessions = await accounts.listSessions();
 
 export default async function ({ req, res, log, error }) {
   if (req.method === "GET") {
-    const allSessions = await accounts.listSessions();
-
     if (allSessions) {
       return res.send(allSessions);
     }
