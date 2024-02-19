@@ -10,11 +10,13 @@ client
 //   );
 
 const databases = new Databases(client);
-const data = await databases.listDocuments(
-  "65ccca601fd0e39ad991",
-  "65ccca69938fb6387ea1"
-).documents;
+
 export default async function ({ req, res, log, error }) {
+  const data = await databases.listDocuments(
+    "65ccca601fd0e39ad991",
+    "65ccca69938fb6387ea1"
+  ).documents;
+
   if (req.method === "GET") {
     return res.json(data);
   }
